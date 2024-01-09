@@ -1,0 +1,72 @@
+steps:
+  # reservations
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/reservations/producion',
+        '-f',
+        'apps/reservations/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/reservations/producion',
+      ]
+
+  # auth
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/auth/producion',
+        '-f',
+        'apps/auth/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/auth/producion',
+      ]
+
+  # notifications
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/notifications/producion',
+        '-f',
+        'apps/notifications/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/notifications/producion',
+      ]
+
+  # payments
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/payments/producion',
+        '-f',
+        'apps/payments/Dockerfile',
+        '.',
+      ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/payments/producion',
+      ]
