@@ -5,7 +5,7 @@ steps:
       [
         'build',
         '-t',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/reservations/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/reservations/production',
         '-f',
         'apps/reservations/Dockerfile',
         '.',
@@ -14,7 +14,7 @@ steps:
     args:
       [
         'push',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/reservations/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/reservations/production',
       ]
 
   # auth
@@ -23,7 +23,7 @@ steps:
       [
         'build',
         '-t',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/auth/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/auth/production',
         '-f',
         'apps/auth/Dockerfile',
         '.',
@@ -32,7 +32,7 @@ steps:
     args:
       [
         'push',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/auth/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/auth/production',
       ]
 
   # notifications
@@ -41,7 +41,7 @@ steps:
       [
         'build',
         '-t',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/notifications/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/notifications/production',
         '-f',
         'apps/notifications/Dockerfile',
         '.',
@@ -50,7 +50,7 @@ steps:
     args:
       [
         'push',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/notifications/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/notifications/production',
       ]
 
   # payments
@@ -59,7 +59,7 @@ steps:
       [
         'build',
         '-t',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/payments/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/payments/production',
         '-f',
         'apps/payments/Dockerfile',
         '.',
@@ -68,5 +68,5 @@ steps:
     args:
       [
         'push',
-        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/payments/producion',
+        'asia-northeast3-docker.pkg.dev/molten-turbine-410702/payments/production',
       ]
