@@ -28,5 +28,6 @@ RUN npm install
 RUN npm install --prod
 
 COPY --from=dev /usr/src/app/dist ./dist
+COPY proto proto
 
 CMD ["node", "dist/apps/reservations/main"]
