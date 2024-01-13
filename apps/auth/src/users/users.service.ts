@@ -34,6 +34,10 @@ export class UsersService {
     return this.usersRepository.findOne(getUserDto);
   }
 
+  async findAll() {
+    return this.usersRepository.find({});
+  }
+
   private async validateCreateUserDto(createUserDto: CreateUserDto) {
     try {
       await this.usersRepository.findOne({
